@@ -69,8 +69,13 @@ body {
 	flex-direction: column;
 	padding: 10px;
 	font-size: 14px;
+	font-weight: 100;
 }
 
+.spacer {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
 .bigValueItem {
 	display: flex;
 	flex-direction: row;
@@ -78,11 +83,19 @@ body {
 	justify-content: space-around;
 	box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
 	font-size: 20px;
-	font-weight: 00;
+	font-family: Roboto;
+	font-weight: 100;
 	height: 48px;
 	overflow-wrap: break-word;
 	padding: 5px;
 	width: 40%;
+}
+
+.bigValueAmount {
+	color: #0288d1;
+	font-weight: bold;
+	padding-left: 3px;
+	padding-right: 3px;
 }
 
 .logo-wrapper {
@@ -93,6 +106,7 @@ body {
 	flex-direction: column;
 	font-size: 14px;
 	justify-content: flex-start;
+	padding-top: 8px;
 
 }
 

@@ -10,8 +10,9 @@ class Organization extends React.Component {
 		return (
 			<div>
 					<div className="bigValueHolder">
-							<span className="bigValueItem">Number of Acquisitions {}</span>
-							<span className="bigValueItem">Total Funding Amount {}</span>
+							<span className="bigValueItem"><span>Number of Acquisitions</span><span className="bigValueAmount"> 20{}</span></span>
+							<div className="spacer"></div>
+							<span className="bigValueItem"><span>Total Funding Amount</span><span className="bigValueAmount">$43m{}</span></span>
 				</div>
 				<div className="layout-column">
 					<div className="logo-wrapper">{}
@@ -54,7 +55,7 @@ class Organization extends React.Component {
 							<div className="Twitter data"></div>
 						</div>
 						<div className="label">Phone Number
-							<div className="phoneNumber">(408)996-0101</div>
+							<div className="phoneNumber">(408) 996-0101</div>
 						</div>
 							<div className="longDescription">Long description placeholder: Sutro is a multinational corporation that designs, manufactures, and markets consumer electronics, personal computers, and software. Sutro is a multinational corporation that designs, manufactures, and markets consumer electronics, personal computers, and software. Sutro is a multinational corporation that designs, manufactures, and markets consumer electronics, personal computers, and software.</div>
 					</div>
