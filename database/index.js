@@ -2,6 +2,9 @@ const fs = require('fs');
 const path = require('path')
 const mongoose = require('mongoose');
 const dbHelpers = require('./dbHelpers.js');
+const initData = require ('./sampleCrunchlyData.json');
+const rp = require('request-promise');
+const Promise = require('bluebird');
 
 mongoose.connect('mongodb://localhost/crunchlyview');
 const db = mongoose.connection;

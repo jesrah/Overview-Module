@@ -1,8 +1,74 @@
+body {
+	font-family: Roboto,sans-serif;
+  font-size: 14px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .centered-wrapper {
 	position: relative;
 	text-align: center;
-	/*background-color: lightpink;*/
+	background-color: white;
 }
 
-h1 {
+.component-container {
+	box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.overview-header {
+	display: flex;
+	position: relative;
+	height: 46px;
+	border-bottom: 1px solid #f2f2f2;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	flex-basis: 0%;
+	flex-shrink: 1;
+	flex-grow: 1;
+	font-size: 14px;
+	max-width: 100%;
+	min-width: 0px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.component-icon {
+	background-color: rgb(2, 136, 209);
+	border-top-left-radius: 2px;
+	display: flex;
+	flex-direction: column;
+	font-size: 14px;
+	fill: white;
+	height: 46px;
+	width: 46px;
+	max-width: 100%;
+
+}
+
+.bigValueHolder {
+	display: flex;
+	align-content: ;
+	align-items: 
+	flex-basis: 50%;
+	flex-direction: column;
+	padding: 8px
+	font-size: 14px;
+}
+
+.bigValueItem {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+	font-size: 20px;
+	font-weight: 200;
+	height: 48px;
+	overflow-wrap: break-word;
+	width: 40%;
+
+
+
 }
