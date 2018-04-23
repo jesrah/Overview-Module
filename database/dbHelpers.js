@@ -16,7 +16,7 @@ function foundersArrayGenerator () {
 	
 	for (var i = 0; i < Math.ceil(Math.random() * 3); i++) {
 		let founder = `${index(firstName)} ${index(lastName)}`;
-		if (founders.indexof(founder) === -1) founders.push(founder);
+		if (founders.indexOf(founder) === -1) founders.push(founder);
 	}
 	return founders; 
 }
