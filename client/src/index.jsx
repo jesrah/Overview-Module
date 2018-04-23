@@ -1,18 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 
 class App extends React.Component {
 	constructor(props){
 		super(props);
 
 		this.state = {
-			hidden: false,
+			orgsArray: [],
+			description: null,
 		};
 	}
 
-	componentDidMount() {
-
-	}
+  componentDidMount(){
+    axios.get('/overview')
+    .then((response) => {
+    	console.log('Axios GET success');
+      this.setState({blogs: response.data, loaded: true});
+    })
+    .catch(function(error) {
+      console.log(error)
+    })
+  }
 	
 	render() {
 		return (
