@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import $ from 'jquery';
+import Organization from './components/organization.jsx'
 
 class App extends React.Component {
 	constructor(props){
@@ -13,16 +15,33 @@ class App extends React.Component {
 	}
 
   componentDidMount(){
+  	// console.log('window location.href: ', window.location.href);
+  	// var id = window.location.href.split('/')[4];
+  	// console.log('getting organization number: ' + id);
+
     axios.get('/overview')
     .then((response) => {
     	console.log('Axios GET success');
-      this.setState({blogs: response.data, loaded: true});
+      this.setState({orgsArray: response.data});
     })
     .catch(function(error) {
-      console.log(error)
+      console.log('Axios GET failure:', error);
     })
+    // $.ajax({
+    // 	url: `/overview`,
+    // 	method: "GET",
+    // 	success: (data) => {
+    // 		console.log('GET request success:', data)
+    // 		this.setState({
+    // 			orgsArray: data
+    // 		})
+    // 	},
+    // 	error: (err) => {
+    // 		console.log('GET error: ', err)
+    // 	}
+    // })
   }
-	
+
 	render() {
 		return (
 			<div className="component-container">
@@ -42,13 +61,7 @@ class App extends React.Component {
 							</div>
 						<h2>Overview</h2>
 					</div>
-					<div className="bigValueHolder">
-						<span className="bigValueItem"> Number of Acquisitions</span>
-						<span className="bigValueItem">Total Funding Amount</span>
-					</div>  
-					<div className="layout-column">
-						<div className="logo">data logo will go here{}</div>
-					</div>
+					<Organization orgs={this.state.orgsArray}/>
 			</div>
 		);
 		
