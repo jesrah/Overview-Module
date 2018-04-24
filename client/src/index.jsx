@@ -18,8 +18,8 @@ class App extends React.Component {
   	// console.log('window location.href: ', window.location.href);
   	// var id = window.location.href.split('/')[4];
   	// console.log('getting organization number: ' + id);
-
-    axios.get('/overview')
+  	var orgId = 10;
+    axios.get(`/overview/${orgId}`)
     .then((response) => {
     	console.log('Axios GET success');
       this.setState({orgsArray: response.data});
@@ -28,7 +28,7 @@ class App extends React.Component {
       console.log('Axios GET failure:', error);
     })
     // $.ajax({
-    // 	url: `/overview`,
+    // 	url: `/overview/${id}`,
     // 	method: "GET",
     // 	success: (data) => {
     // 		console.log('GET request success:', data)
@@ -61,7 +61,7 @@ class App extends React.Component {
 							</div>
 						<h2>Overview</h2>
 					</div>
-					<Organization orgs={this.state.orgsArray}/>
+					{this.state.orgsArray.length ? <Organization orgs={this.state.orgsArray}/> : null }
 			</div>
 		);
 		

@@ -12,10 +12,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false })); // F or T?
 
 
-app.get('/overview', (req, res) => {
-	console.log('Express GET success', res.data);
+app.get(`/overview/:orgId`, (req, res) => {
+	console.log('req.params is', req.params);
 	mongodb.Orgs.find()
 	.then(orgs => res.send(orgs))
 });
+
+//turn req.params from string to number
+//find the org whose orgId === the param number
+//have server serve that org to the client
+//change client code to accept any org
 
 app.listen(3002, () => console.log('App listening on port 3002'));
